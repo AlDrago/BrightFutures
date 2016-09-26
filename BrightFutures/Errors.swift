@@ -26,15 +26,15 @@ import Result
 
 /// Represents a wrapper over any error that can happen. Can be nested
 public struct AnyError {
-    public let cause:ErrorType
+    public let cause: Error
     
-    public init(cause:ErrorType) {
+    public init(cause: Error) {
         self.cause = cause
     }
 }
 
 /// Extends `AnyError` to conform to `ErrorType`
-extension AnyError : ErrorType {
+extension AnyError : Error {
 }
 
 /// An enum representing every possible error for errors returned by BrightFutures
